@@ -3,55 +3,98 @@
 
 ## Thông tin sinh viên
 
-* Họ và tên:Đỗ Hữu Đại  
-* MSSV: 23010825
+* Họ và tên: ...
+* MSSV: ...
+* Lớp: ...
 
 ## Mục tiêu
 
-Tìm hiểu và thực hành sử dụng công cụ Postman để kiểm thử API.
+Tìm hiểu công cụ Postman và thực hành kiểm thử API bằng các phương thức GET, POST, PUT, DELETE.
 
-## Tài liệu tham khảo
+## Công cụ sử dụng
 
-1. Video hướng dẫn Postman.
-2. Tài liệu chính thức của Postman.
-3. Các nguồn tài liệu khác trên Internet.
+* Postman
+* GitHub
+* JSONPlaceholder API
 
 ## Nội dung thực hiện
 
-### 1. Cài đặt Postman
+### 1. GET danh sách bài viết
 
-Mô tả quá trình cài đặt.
+API:
 
-### 2. Thực hiện Request GET
-
-Mô tả API được sử dụng.
+https://jsonplaceholder.typicode.com/posts
 
 Kết quả:
 
-![GET Request](images/request_get.png)
+![GET Posts](images/get_posts.png)
 
-### 3. Thực hiện Request POST
+### 2. GET chi tiết bài viết
 
-Mô tả dữ liệu gửi lên server.
+API:
 
-Kết quả:
-
-![POST Request](images/request_post.png)
-
-### 4. Kiểm thử Response
-
-Mô tả các thông tin trả về từ API.
+https://jsonplaceholder.typicode.com/posts/1
 
 Kết quả:
 
-![Response Test](images/test_result.png)
+![GET Post By ID](images/get_post_by_id.png)
+
+### 3. POST tạo bài viết mới
+
+API:
+
+https://jsonplaceholder.typicode.com/posts
+
+Kết quả:
+
+![POST Create](images/post_create.png)
+
+### 4. PUT cập nhật bài viết
+
+API:
+
+https://jsonplaceholder.typicode.com/posts/1
+
+Kết quả:
+
+![PUT Update](images/put_update.png)
+
+### 5. DELETE bài viết
+
+API:
+
+https://jsonplaceholder.typicode.com/posts/1
+
+Kết quả:
+
+![DELETE](images/delete_post.png)
+
+### 6. Kiểm thử bằng Test Script
+
+Script:
+
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response time less than 1000ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(1000);
+});
+```
+
+Kết quả:
+
+![Test Result](images/test_result.png)
 
 ## Nhận xét
 
-* Hiểu được cách tạo Request trong Postman.
-* Hiểu cách gửi dữ liệu và nhận Response.
-* Biết cách kiểm thử API cơ bản.
+* Hiểu được cách gửi request bằng Postman.
+* Thực hành các phương thức GET, POST, PUT, DELETE.
+* Biết cách viết test script cơ bản.
+* Hiểu cấu trúc dữ liệu JSON trong API.
 
 ## Kết luận
 
-Sau khi thực hành, em đã nắm được các thao tác cơ bản của Postman và có thể sử dụng công cụ để kiểm thử API.
+Qua bài thực hành, em đã nắm được các thao tác cơ bản của Postman và có thể sử dụng công cụ này để kiểm thử API trong quá trình phát triển phần mềm.
+
