@@ -3,9 +3,8 @@
 
 ## Thông tin sinh viên
 
-* Họ và tên: ...
-* MSSV: ...
-* Lớp: ...
+* Họ và tên: Đỗ Hữu Đại
+* MSSV: 23010825
 
 ## Mục tiêu
 
